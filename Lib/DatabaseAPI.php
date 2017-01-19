@@ -144,7 +144,7 @@ class DatabaseAPI {
 			$info->id = $id;
 			$info->status = $status;
 			$info->code1 = $code1;
-			$info->$code2 = $code2;
+			$info->code2 = $code2;
 			return $info;
 		}
 		return NULL;
