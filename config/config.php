@@ -28,7 +28,7 @@ define("REDIS_PORT", '6379');
 define("DBHOST", '10.10.130.46');
 define("DBUSER", 'root');
 define("DBPASS", 'NI6lLkR2Xng8W6BR');
-define("DBNAME", '?????');
+define("DBNAME", 'coach_gewara');
 
 //Wechat Authorize
 define("CALLBACK", 'wechat/callback');
