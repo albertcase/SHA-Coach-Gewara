@@ -77,7 +77,7 @@ class ApiController extends Controller {
 		}
 
 		echo $status;
-		echo $codeBox[0]->id."|".$codeBox[0]->number;
+		echo $codeBox[0]['id']."|".$codeBox[0]['number'];
 		exit;
 		
 		if($DatabaseAPI->insertInfo($data)) {
