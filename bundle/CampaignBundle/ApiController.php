@@ -43,4 +43,33 @@ class ApiController extends Controller {
 		}
     }
 
+    public function checkAction() {
+    	global $user;
+
+    	$request = $this->request;
+    	$fields = array(
+			'mobile' => array('cellphone', '120'),
+		);
+		$request->validation($fields);
+		$DatabaseAPI = new \Lib\DatabaseAPI();
+		$data = new \stdClass();
+		$data->uid = $user->uid;
+		$data->mobile = $request->request->get('mobile');
+
+		$rs = $DatabaseAPI->findLotteryByUid($user->uid);
+		if ($rs) {
+			$this->statusPrint('2', '已经抽过');
+		}
+
+		$codeBox = $DatabaseAPI->getGewaraCode(2);
+		var_dump($codeBox);exit;
+		
+		if($DatabaseAPI->insertInfo($data)) {
+			$data = array('status' => 1);
+			$this->dataPrint($data);
+		} else {
+			$this->statusPrint('0', 'failed');
+		}
+    }
+
 }

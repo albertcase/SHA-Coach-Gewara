@@ -6,9 +6,7 @@ use Core\Controller;
 class PageController extends Controller {
 
 	public function indexAction() {
-		$RedisAPI = new \Lib\RedisAPI();
-		$config = $RedisAPI->jssdkConfig($this->request->getUrl(TRUE));
-		$this->render('index', array('config' => $config));
+		$this->render('index');
 	}
 
 	public function clearCookieAction() {

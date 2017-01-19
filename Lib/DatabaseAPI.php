@@ -130,4 +130,38 @@ class DatabaseAPI {
 		return NULL;
 	}
 
+	/**
+	 * Create user in database
+	 */
+	public function findLotteryByUid($uid){
+		$sql = "SELECT `id`, `status`, `code1`, `code2` FROM `lottery` WHERE `uid` = ?"; 
+		$res = $this->connect()->prepare($sql);
+		$res->bind_param("s", $uid);
+		$res->execute();
+		$res->bind_result($id, $status, $code1, $code2);
+		if($res->fetch()) {
+			$info = new \stdClass();
+			$info->id = $id;
+			$info->status = $status;
+			$info->code1 = $code1;
+			$info->$code2 = $code2;
+			return $info;
+		}
+		return NULL;
+	}
+
+	/**
+	 * Create user in database
+	 */
+	public function getGewaraCode($row = 2) {
+		$sql="SELECT * FROM  `code`  where status = 0  limit $row";
+		$res = $this->db->query($sql);
+		$data = array();
+		while($rows = $res->fetch_array(MYSQLI_ASSOC))
+		{
+			$data[] = $rows;
+		}		
+		return $data;
+	}
+
 }
