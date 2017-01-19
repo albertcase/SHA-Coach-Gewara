@@ -76,13 +76,22 @@ class ApiController extends Controller {
 			$status = 0;
 		}
 
-		$DatabaseAPI->changeStatus($codeBox[0]['id']);
-		$DatabaseAPI->changeStatus($codeBox[1]['id']);
-		$data->status = $status;
-		$data->cid1 = $codeBox[0]['id'];
-		$data->code1 = $codeBox[0]['number'];
-		$data->cid2 = $codeBox[1]['id'];
-		$data->code2 = $codeBox[1]['number'];
+		if ($status == 1) {
+			$DatabaseAPI->changeStatus($codeBox[0]['id']);
+			$DatabaseAPI->changeStatus($codeBox[1]['id']);
+			$data->status = $status;
+			$data->cid1 = $codeBox[0]['id'];
+			$data->code1 = $codeBox[0]['number'];
+			$data->cid2 = $codeBox[1]['id'];
+			$data->code2 = $codeBox[1]['number'];
+		} else {
+			$data->status = $status;
+			$data->cid1 = '';
+			$data->code1 = '';
+			$data->cid2 = '';
+			$data->code2 = '';
+		}
+		
 		if($DatabaseAPI->insertLottery($data)) {
 			$data = array('status' => 1);
 			$this->dataPrint($data);
