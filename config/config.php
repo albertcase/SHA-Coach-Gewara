@@ -1,6 +1,6 @@
 <?php
 
-define("BASE_URL", 'http://127.0.0.1:9211/');
+define("BASE_URL", 'http://tiffanytangmovie.samesamechina.com/');
 define("TEMPLATE_ROOT", dirname(__FILE__) . '/../template');
 define("VENDOR_ROOT", dirname(__FILE__) . '/../vendor');
 
@@ -11,7 +11,7 @@ define("USER_STORAGE", 'COOKIE');
 define("WECHAT_VENDOR", 'curio'); // default | curio
 
 //Wechat config info
-define("TOKEN", '?????');
+define("TOKEN", 'zcBpBLWyAFy6xs3e7HeMPL9zWrd7Xy');
 define("APPID", '?????');
 define("APPSECRET", '?????');
 define("NOWTIME", date('Y-m-d H:i:s'));
@@ -25,9 +25,9 @@ define("REDIS_HOST", '127.0.0.1');
 define("REDIS_PORT", '6379');
 
 //Database config info
-define("DBHOST", '127.0.0.1');
+define("DBHOST", '10.10.130.46');
 define("DBUSER", 'root');
-define("DBPASS", '');
+define("DBPASS", 'NI6lLkR2Xng8W6BR');
 define("DBNAME", '?????');
 
 //Wechat Authorize
