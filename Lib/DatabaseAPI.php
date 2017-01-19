@@ -164,4 +164,31 @@ class DatabaseAPI {
 		return $data;
 	}
 
+	/**
+	 * 
+	 */
+	public function changeStatus($id){
+		$sql = "UPDATE `code` SET `status` = 1 WHERE `id` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("s", $id);
+		if($res->execute()) 
+			return TRUE;
+		else 
+			return FALSE;
+	}
+
+	/**
+	 * 
+	 */
+	public function insertLottery($data){
+		$nowtime = NOWTIME;
+		$sql = "INSERT INTO `lottery` SET `uid` = ?, `mobile` = ?, `status` = ?, `cid1` = ?, `code1` = ?, `cid2` = ?, `code2` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("sssssss", $data->uid, $data->mobile, $data->status, $data->cid1, $data->code1, $data->cid2, $data->code2);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
 }

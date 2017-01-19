@@ -75,12 +75,15 @@ class ApiController extends Controller {
 			//奖品发完 
 			$status = 0;
 		}
-
-		echo $status;
-		echo $codeBox[0]['id']."|".$codeBox[0]['number'];
-		exit;
 		
-		if($DatabaseAPI->insertInfo($data)) {
+		$DatabaseAPI->changeStatus($codeBox[0]['id']);
+		$DatabaseAPI->changeStatus($codeBox[1]['id'])
+		$data->status = $status;
+		$data->cid1 = $codeBox[0]['id'];
+		$data->code1 = $codeBox[0]['number'];
+		$data->cid2 = $codeBox[1]['id'];
+		$data->code2 = $codeBox[1]['number'];
+		if($DatabaseAPI->insertLottery($data)) {
 			$data = array('status' => 1);
 			$this->dataPrint($data);
 		} else {
