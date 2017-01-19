@@ -34,6 +34,8 @@ define("DBNAME", 'coach_gewara');
 define("CALLBACK", 'wechat/callback');
 define("SCOPE", 'snsapi_base');
 
+define("PER", '500');
+define("PERMAX", '10000');
 //Wechat Authorize Page
 define("AUTHORIZE_URL", '[
 	"/"

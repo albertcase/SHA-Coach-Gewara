@@ -62,8 +62,23 @@ class ApiController extends Controller {
 			$this->statusPrint('2', '已经抽过');
 		}
 
+		//概率
+		$rand = mt_rand(1, PERMAX);
+		if ($rand <= PER) {
+			$status = 1;
+		} else {
+			$status = 0;
+		}
+
 		$codeBox = $DatabaseAPI->getGewaraCode(2);
-		var_dump($codeBox);exit;
+		if (!$codeBox) {
+			//奖品发完 
+			$status = 0;
+		}
+
+		echo $status;
+		echo $rs[0]->id."|".$rs[0]->number;
+		exit;
 		
 		if($DatabaseAPI->insertInfo($data)) {
 			$data = array('status' => 1);
