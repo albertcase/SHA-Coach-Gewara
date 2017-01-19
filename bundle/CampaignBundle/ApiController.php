@@ -50,11 +50,12 @@ class ApiController extends Controller {
     	$fields = array(
 			'mobile' => array('cellphone', '120'),
 		);
-		$request->validation($fields);
+		//$request->validation($fields);
 		$DatabaseAPI = new \Lib\DatabaseAPI();
 		$data = new \stdClass();
 		$data->uid = $user->uid;
-		$data->mobile = $request->request->get('mobile');
+		//$data->mobile = $request->request->get('mobile');
+		$data->mobile = '1512038676';
 
 		$rs = $DatabaseAPI->findLotteryByUid($user->uid);
 		if ($rs) {
