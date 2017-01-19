@@ -75,9 +75,9 @@ class ApiController extends Controller {
 			//奖品发完 
 			$status = 0;
 		}
-		
+
 		$DatabaseAPI->changeStatus($codeBox[0]['id']);
-		$DatabaseAPI->changeStatus($codeBox[1]['id'])
+		$DatabaseAPI->changeStatus($codeBox[1]['id']);
 		$data->status = $status;
 		$data->cid1 = $codeBox[0]['id'];
 		$data->code1 = $codeBox[0]['number'];
