@@ -50,12 +50,12 @@ class ApiController extends Controller {
     	$fields = array(
 			'mobile' => array('cellphone', '120'),
 		);
-		//$request->validation($fields);
+		$request->validation($fields);
 		$DatabaseAPI = new \Lib\DatabaseAPI();
 		$data = new \stdClass();
 		$data->uid = $user->uid;
-		//$data->mobile = $request->request->get('mobile');
-		$data->mobile = '1512038676';
+		$data->mobile = $request->request->get('mobile');
+		//$data->mobile = '1512038676';
 
 		$rs = $DatabaseAPI->findLotteryByUid($user->uid);
 		if ($rs) {
@@ -67,13 +67,13 @@ class ApiController extends Controller {
 		if ($rand <= PER) {
 			$status = 1;
 		} else {
-			$status = 0;
+			$status = 2;
 		}
 
 		$codeBox = $DatabaseAPI->getGewaraCode(2);
 		if (!$codeBox) {
 			//奖品发完 
-			$status = 0;
+			$status = 2;
 		}
 
 		if ($status == 1) {
