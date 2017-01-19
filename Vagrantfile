@@ -4,12 +4,10 @@
 Vagrant.configure("2") do |config|
  
   config.vm.box = "ubuntu14.04-20150827"
-  config.vm.hostname = "Minon-Luckdraw"
+  config.vm.hostname = "sha-coach-gewara"
 
-  
-  config.vm.network :forwarded_port, guest: 80, host: 9921
-  config.vm.network :forwarded_port, guest: 3306, host: 33921
-  
+  config.vm.network :forwarded_port, guest: 80, host: 9227
+  config.vm.network :forwarded_port, guest: 3306, host: 33227
   config.vm.network :private_network, ip: "192.168.33.10"
 
   config.vm.synced_folder "./", "/vagrant", :nfs => true
