@@ -120,12 +120,7 @@ var pfun = {
                 link: shareArr._link,
                 imgUrl: shareArr._imgUrl,
                 success: function (res) {
-
-                    if(self.getQueryString("type") == "failure"){
-                        self.setCookie("times", "0", "360");
-                        location.href = "/";
-                    }
-                    _hmt.push(['_trackEvent', 'share', 'ShareAppMessage']);
+                    //_hmt.push(['_trackEvent', 'share', 'ShareAppMessage']);
                     //  alert('已分享');
                 },
                 cancel: function (res) {
@@ -145,11 +140,7 @@ var pfun = {
                 imgUrl: shareArr._imgUrl,
 
                 success: function (res) {
-                    if(self.getQueryString("type") == "failure"){
-                        self.setCookie("times", "0", "360");
-                        location.href = "/";
-                    }
-                    _hmt.push(['_trackEvent', 'share', 'ShareTimeline']);
+                    //_hmt.push(['_trackEvent', 'share', 'ShareTimeline']);
                     // alert('已分享');
                 },
                 cancel: function (res) {
@@ -238,6 +229,22 @@ var pfun = {
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
         if(r!=null)return unescape(r[2]); return null;
+    },
+    eventTester: function(m, e, c){    // 视频事件监测函数
+        /*
+         * eventTester("play");              // play()和autoplay开始播放时触发
+         * eventTester("pause");             // pause() 暂停触发
+         * eventTester("timeupdate");        // 播放时间改变
+         * eventTester("ended");             // 播放结束
+        self.eventTester(lnyvideo, "ended", function(){
+            location.href = "/second";
+            lnyvideo.pause(); 
+            lnyvideo.style.height = "0";
+        });
+         */
+        m.addEventListener(e,function(){
+             c()
+        },false);
     }
 
 }
