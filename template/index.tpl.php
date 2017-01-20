@@ -19,6 +19,7 @@
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/d78ccbab-16ad-4386-89a0-af37fe477c27/wechat"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
 		var _hmt = _hmt || [];
 		(function() {
