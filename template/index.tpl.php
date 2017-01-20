@@ -19,7 +19,15 @@
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/d78ccbab-16ad-4386-89a0-af37fe477c27/wechat"></script>
-
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?56dcfdb0da628102c73164f2cfc18a17";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
 </head>
 <body>
 <script type="text/javascript">
