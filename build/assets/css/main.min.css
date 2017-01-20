@@ -547,6 +547,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .failure_text {
   margin: 0 0 16% 0; }
 
+.p-model-con strong {
+  font-weight: 900; }
+
 /* codepop */
 .textStyle, .textStyle p {
   width: 100%; }
