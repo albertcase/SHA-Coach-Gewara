@@ -285,12 +285,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 10; }
 
 .loading_con {
-  width: 50%;
+  width: 70%;
   text-align: center;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -10% 0 0 -25%; }
+  margin: -10% 0 0 -35%; }
 
 .spinner {
   margin: 18px 0 3px 0;
@@ -546,6 +546,33 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 .failure_text {
   margin: 0 0 16% 0; }
+
+/* codepop */
+.textStyle, .textStyle p {
+  width: 100%; }
+
+.textStyle p em {
+  width: 20%;
+  float: left;
+  display: inline-block; }
+
+.textStyle p span {
+  width: 77%;
+  margin: 0 0 0 3%;
+  float: left;
+  display: inline-block;
+  word-break: break-all; }
+
+#pop-codeuse h3 {
+  padding: 6px 0;
+  width: 100%;
+  display: inline-block; }
+
+#pop-codeuse center {
+  width: 100%;
+  padding: 3px 0;
+  display: inline-block;
+  display: inline-block; }
 
 /*****************************
 * 常用

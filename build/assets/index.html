@@ -17,13 +17,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=6d87dd2873">
-    <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/d78ccbab-16ad-4386-89a0-af37fe477c27/wechat"></script>
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=e44535e013">
+    <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/d78ccbab-16ad-4386-89a0-af37fe477c27/wechat?debug=true"></script>
 
 </head>
 <body>
 <script type="text/javascript">
-    var codeStatus = '<?php echo $status;?>';
+    var webData = {
+        status: '<?php print $status;?>',
+        code1: '<?php print $code1;?>',
+        code2: '<?php print $code2;?>',
+    }
 </script>
 <div class="loading">
     <div class="loading_con">
@@ -138,8 +142,50 @@
     </div>
   </div>
 </div>
+
+
+<div class="popup transition hidden" id="codeuse">
+  <div class="p-model">
+    <h4>票券使用 <i class="close"><img src="" sourcesrc="/build/assets/img/close.png?v=7e8b41310b" width="100%"></i></h4>
+    <div class="p-model-con" id="pop-codeuse">
+        <h3>票券使用1：如何绑定格瓦拉电影票券</h3>
+        <p>电影票券绑定是将您获得的电影票券和您的格瓦拉账户进行绑定，绑定后请记住支付密码，在使用时需输入</p>
+        <center>【绑定流程】</center>
+        <div class="textStyle">
+        <p><em>【Step1】</em><span>注册并登录格瓦拉生活网</span></p>
+        <p><em>【Step2】</em><span>点击首页右下方的“我的账户”</span></p>
+        <p><em>【Step3】</em><span>进入我的钱包，选择我的票券</span></p>
+        <p><em>【Step4】</em><span>输入电影票券密码（由12位数字和字母
+                          组成），并点“绑定”，页面提示 绑定成
+                          功信息</span></p>
+        <p><em>【Step5】</em><span>进入选择影院、影片、场次、选择座位
+                          确认订单、支付页面中选择“可用优惠”、
+                          选择“票券”、点击“使用”，完成支付</span></p>
+        </div>
+
+        <h3>票券使用2：如何直接使用格瓦拉电影票券</h3>
+        <center>【直接使用流程】</center>
+        <div class="textStyle">
+            <p><em>【Step1】</em><span>注册并登录格瓦拉生活网</span></p>
+            <p><em>【Step2】</em><span>进入选择影院、影片、场次、选择座位</span></p>
+            <p><em>【Step3】</em><span>确认订单、支付页面中选“可用优惠”点击
+                              “票券”输入电子兑换密码点击“使用”完成                     
+                              支付</span></p>
+            <p><em>【Step4】</em><span>凭取票短信至影院自助取票机取票</span></p>
+        </div>
+        <center>【使用期限】</center>
+        <p>【使用期限】自影片上映起25天内有效，不可延期，  
+每个用户限用4张。</p>
+        <br>
+
+    </div>
+  </div>
+</div>
+
+
+
 <audio src="/build/assets/img/newyear.mp3?v=8357fecd13" id="myAudio" preload="auto"></audio>
-<script type="text/javascript" src="/build/assets/js/main.min.js?v=5494ba341a"></script>
+<script type="text/javascript" src="/build/assets/js/main.min.js?v=02937a95a3"></script>
 
 
 

@@ -25,9 +25,9 @@ define("REDIS_HOST", '127.0.0.1');
 define("REDIS_PORT", '6379');
 
 //Database config info
-define("DBHOST", '10.10.130.46');
+define("DBHOST", '127.0.0.1');  // 10.10.130.46
 define("DBUSER", 'root');
-define("DBPASS", 'NI6lLkR2Xng8W6BR');
+define("DBPASS", '');
 define("DBNAME", 'coach_gewara');
 
 //Wechat Authorize
