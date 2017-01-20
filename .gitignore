@@ -1,11 +1,11 @@
 # Ignore configuration files that may contain sensitive information.
 .DS_Store
 .vagrant
-puppet/
+#puppet/
 node_modules/
 config/
 .zip
-build/src/
+#build/src/
 build/gulpfile.js
 
 
