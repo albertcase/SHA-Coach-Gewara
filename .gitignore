@@ -3,6 +3,9 @@
 .vagrant
 puppet/
 node_modules/
-build/assets/
 config/
+.zip
+build/src/
+build/gulpfile.js
+
 
