@@ -154,7 +154,7 @@ class DatabaseAPI {
 	 * Create user in database
 	 */
 	public function getGewaraCode($row = 2) {
-		$sql="SELECT * FROM  `code`  where status = 0  and id <= 800 limit $row";
+		$sql="SELECT * FROM  `code`  where status = 0 limit $row";
 		$res = $this->db->query($sql);
 		$data = array();
 		while($rows = $res->fetch_array(MYSQLI_ASSOC))
